@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ruler Extension</title>
+  <style>
+    body {
+      width: 200px;
+      padding: 15px;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+    }
+    
+    h3 {
+      margin: 0 0 15px 0;
+      color: #333;
+      font-size: 16px;
+      text-align: center;
+    }
+    
+    .button {
+      width: 100%;
+      padding: 10px;
+      background: #4285f4;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background 0.2s;
+    }
+    
+    .button:hover {
+      background: #3367d6;
+    }
+    
+    .button:active {
+      background: #2654c7;
+    }
+    
+    .info {
+      margin-top: 15px;
+      font-size: 12px;
+      color: #666;
+      text-align: center;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+  <h3>Ruler Extension</h3>
+  <button id="rotateButton" class="button">Rotate Ruler</button>
+  <div class="info">
+    Double-click the ruler to rotate it.<br>
+    Click and drag to move it around.
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
