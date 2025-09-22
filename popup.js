@@ -1,12 +1,25 @@
 document.addEventListener('DOMContentLoaded', function() {
   const rotateButton = document.getElementById('rotateButton');
-    const toggleButton = document.getElementById('toggleButton');
+    // const toggleButton = document.getElementById('toggleButton');
+      const showHideSwitch = document.getElementById('showHideSwitch');
 
 
-      if (toggleButton) {
-    toggleButton.addEventListener('click', function () {
-      chrome.runtime.sendMessage({ action: "toggleRuler" });
-      window.close();
+
+  //     if (toggleButton) {
+  //   toggleButton.addEventListener('click', function () {
+  //     chrome.runtime.sendMessage({ action: "toggleRuler" });
+  //     // window.close();
+  //   });
+  // }
+
+    if (showHideSwitch) {
+    showHideSwitch.addEventListener('change', function () {
+      if (showHideSwitch.checked) {
+        chrome.runtime.sendMessage({ action: "showRuler" });
+      } else {
+        chrome.runtime.sendMessage({ action: "hideRuler" });
+      }
+      // popup stays open
     });
   }
   
@@ -15,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
       chrome.runtime.sendMessage({
         action: "rotateRuler"
       });
-      window.close();
+      // window.close();
     });
   }
 });
