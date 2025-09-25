@@ -49,6 +49,7 @@
   }
 
   function removeRuler() {
+    debugger;
     if (ruler) {
       ruler.remove();
       ruler = null;
@@ -84,6 +85,7 @@
   }
 
   function rotateRuler() {
+    dubugger;
     if (!ruler) return;
     currentRotation = (currentRotation + 45) % 360;
     ruler.style.transform = `rotate(${currentRotation}deg)`;
@@ -91,6 +93,7 @@
 
   // Listen for messages
   chrome.runtime.onMessage.addListener((request) => {
+    debugger;
     if (request.action === "rotateRuler") {
       rotateRuler();
     } else if (request.action === "toggleRuler") {
