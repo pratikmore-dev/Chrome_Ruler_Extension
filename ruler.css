@@ -1,4 +1,4 @@
-.page-ruler {
+ .page-ruler {
   position: fixed;
   /* Width is set dynamically in JavaScript to exactly 30cm */
   height: 50px;
@@ -22,7 +22,7 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
-/* Small marks every 1mm */
+
 .ruler-mark.mm-mark {
   position: absolute;
   top: 0;
@@ -32,7 +32,7 @@
   pointer-events: none;
 }
 
-/* Half-centimeter marks every 5mm (0.5cm) */
+
 .ruler-mark.half-cm-mark {
   position: absolute;
   top: 0;
@@ -42,7 +42,7 @@
   pointer-events: none;
 }
 
-/* Major marks every 1cm (10mm) */
+
 .ruler-mark.major-mark {
   position: absolute;
   top: 0;
@@ -67,10 +67,10 @@
   border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
-/* Prevent text selection when dragging */
+
 .page-ruler * {
   user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-}
+} 
